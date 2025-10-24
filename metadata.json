@@ -1,0 +1,9 @@
+{
+  "name": "W3J Power Suite",
+  "description": "A comprehensive suite of AI-powered tools leveraging the Gemini API for advanced media editing, conversational intelligence, real-time data access, and multimodal generation. Experience the future of AI in one unified application.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone",
+    "geolocation"
+  ]
+}
