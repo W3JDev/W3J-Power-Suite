@@ -1,5 +1,4 @@
-// FIX: Import React to resolve 'Cannot find namespace 'React'' error when using React.FC.
-import React from 'react';
+
 
 export interface ChatMessagePart {
   text?: string;
@@ -22,6 +21,7 @@ export interface ChatSession {
   title: string;
   messages: ChatMessage[];
   createdAt: number;
+  personaId?: string;
 }
 
 // New type for TTS configuration
@@ -55,4 +55,21 @@ export interface Persona {
   prompt: string;
   voiceId: 'Kore' | 'Puck' | 'Zephyr' | 'Charon';
   isCustom?: boolean;
+}
+
+export interface SearchResult {
+  type: 'Chat' | 'Media' | 'Scheduler';
+  id: string;
+  title: string;
+  snippet: string;
+  onClick: () => void;
+}
+
+export interface ScheduledItem {
+  id: string;
+  title: string;
+  notes: string;
+  dateTime: string; // ISO string format
+  isComplete: boolean;
+  createdAt: number;
 }

@@ -1,5 +1,7 @@
+
+
 import React from 'react';
-import { Persona } from './types';
+import type { Persona } from './types';
 
 // Redesigned for a thinner, more elegant aesthetic (strokeWidth={1.5})
 export const ICONS = {
@@ -18,6 +20,7 @@ export const ICONS = {
   MENU: <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6"><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" /></svg>,
   CHEVRON_LEFT: <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6"><path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" /></svg>,
   CHEVRON_RIGHT: <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6"><path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" /></svg>,
+  CHEVRON_DOWN: <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4"><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>,
   
   // Chat Input
   PAPERCLIP: <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6"><path strokeLinecap="round" strokeLinejoin="round" d="M18.375 12.739l-7.693 7.693a4.5 4.5 0 01-6.364-6.364l10.94-10.94A3 3 0 1119.5 7.372L8.552 18.32m.009-.01l-.01.01m5.699-9.941l-7.81 7.81a1.5 1.5 0 002.122 2.122l7.81-7.81" /></svg>,
@@ -44,6 +47,12 @@ export const ICONS = {
   // Icons for Live Tools Modal
   SEARCH: <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6"><path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" /></svg>,
   IMAGE_GEN: <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6"><path strokeLinecap="round" strokeLinejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" /></svg>,
+  DOWNLOAD: <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6"><path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" /></svg>,
+
+  // Scheduler Icons
+  CLOCK: <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4"><path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>,
+  CHECK_CIRCLE: <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6"><path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>,
+  CIRCLE: <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6"><path strokeLinecap="round" strokeLinejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>,
 };
 
 export const PERSONAS: Persona[] = [
@@ -57,6 +66,31 @@ Tone: Clear, calm, and informative.
 Conversational Framework: Prioritize direct answers. Break down complex topics into easy-to-understand points. Always verify information if unsure. Do not express personal opinions.
 Implicit Teaching: Models clarity and structured thinking.`,
       voiceId: 'Kore' 
+    },
+    { 
+      id: 'prototyper',
+      name: 'Prototyper, the UI/UX Architect',
+      description: 'Generates live code previews for webpages.',
+      prompt: `**ROLE & GOAL:**
+You are "Prototyper," the world's most skilled AI UI/UX architect. Your single, non-negotiable function is to generate a complete, production-ready, single-file HTML prototype based on a user's request.
+
+**CRITICAL DESIGN PRINCIPLES:**
+- **Modern & Creative:** Generate visually stunning, unique, and professional designs. Use modern layouts (bento grids, etc.), premium fonts (Google Fonts), and sophisticated color schemes.
+- **Content-Rich:** Populate pages with high-quality placeholder text and royalty-free images (from Unsplash, Pexels) to make them look complete.
+- **Tech Stack:** You MUST use Tailwind CSS via the official CDN. All styling MUST be done with Tailwind classes.
+
+**OUTPUT FORMAT (ABSOLUTE & NON-NEGOTIABLE):**
+1.  **CODE ONLY:** Your entire response must be ONLY the HTML code.
+2.  **NO CONVERSATION:** Do NOT include ANY text, explanation, greetings, or apologies before or after the code block.
+3.  **MARKDOWN BLOCK:** The entire HTML code MUST be enclosed in a single markdown block like this:
+\`\`\`html
+<!DOCTYPE html>
+...
+</html>
+\`\`\`
+
+**FINAL CHECK:** Before responding, review your output. If it contains anything other than the single HTML code block, delete the extra content and respond again. Your response must be clean code.`,
+      voiceId: 'Charon' 
     },
     { 
       id: 'kai_listener', 

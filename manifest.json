@@ -1,0 +1,28 @@
+{
+  "short_name": "W3J Suite",
+  "name": "W3J Power Suite",
+  "description": "A comprehensive suite of AI-powered tools leveraging the Gemini API for advanced media editing, conversational intelligence, real-time data access, and multimodal generation. Experience the future of AI in one unified application.",
+  "icons": [
+    {
+      "src": "/vite.svg",
+      "type": "image/svg+xml",
+      "sizes": "any",
+      "purpose": "any maskable"
+    },
+    {
+        "src": "/vite.svg",
+        "sizes": "192x192",
+        "type": "image/svg+xml"
+    },
+    {
+        "src": "/vite.svg",
+        "sizes": "512x512",
+        "type": "image/svg+xml"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#0A1828",
+  "background_color": "#0A1828"
+}
